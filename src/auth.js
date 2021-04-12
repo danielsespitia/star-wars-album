@@ -1,6 +1,6 @@
 const auth = {
   films: [1, 2, 3, 4, 5, 6],
-  characters: [
+  people: [
     1,
     2,
     3,
@@ -84,7 +84,7 @@ const auth = {
     81,
     82,
   ],
-  spaceships: [
+  starships: [
     1,
     2,
     3,
