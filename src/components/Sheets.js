@@ -56,12 +56,12 @@ function Sheet({ name, sheetType, handleClick }) {
               </SheetContainer>
             );
           })}
-          {!!sheetType &&
+        {!!sheetType &&
           !!sheetType[0].name &&
           sheetType.length > 0 &&
           sheetType.map(({ name }) => {
             return (
-              <SheetContainer>
+              <SheetContainer key={name}>
                 <p>{name}</p>
               </SheetContainer>
             );

@@ -46,9 +46,23 @@ function Album() {
       }
       setAlbumData({ ...albumData, people: peopleArray });
     }
+    if (name === 'Naves') {
+      const starshipArray = [];
+      for (let i = 1; i <= 4; i++) {
+        try {
+          const { data } = await axios({
+            method: 'GET',
+            url: `https://swapi.dev/api/starships/?page=${i}`,
+          });
+          for (let j = 0; j < data.results.length; j++) {
+            starshipArray.push(data.results[j]);
+          }
+        } catch (error) {}
+      }
+      setAlbumData({ ...albumData, starships: starshipArray });
+    }
   };
 
-  console.log(albumData.people);
   return (
     <AlbumContainer>
       <Sheets
@@ -61,7 +75,11 @@ function Album() {
         sheetType={albumData.people}
         handleClick={handleClick}
       />
-      <Sheets name="Naves" sheetType={auth.starships} />
+      <Sheets
+        name="Naves"
+        sheetType={albumData.starships}
+        handleClick={handleClick}
+      />
     </AlbumContainer>
   );
 }
