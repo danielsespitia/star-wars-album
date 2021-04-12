@@ -15,6 +15,7 @@ export const SheetsContainer = styled.div`
 
 export const SheetContainer = styled.div`
   display: flex;
+  text-align: center;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -38,6 +39,7 @@ function Sheet({ name, sheetType, handleClick }) {
         {!!sheetType &&
           !sheetType[0].title &&
           !sheetType[0].name &&
+          !sheetType[0].model &&
           sheetType.length > 0 &&
           sheetType.map((pos) => {
             return (
@@ -49,23 +51,51 @@ function Sheet({ name, sheetType, handleClick }) {
         {!!sheetType &&
           !!sheetType[0].title &&
           sheetType.length > 0 &&
-          sheetType.map(({ episode_id, title }) => {
+          sheetType.map(
+            ({ episode_id, title, director, producer, release_date }) => {
+              return (
+                <SheetContainer key={episode_id}>
+                  <p>{title}</p>
+                  <p>Episodio: {episode_id}</p>
+                  <p>Director: {director}</p>
+                  <p>Productor(es): {producer}</p>
+                  <p>Fecha de Lanzamiento: {release_date}</p>
+                </SheetContainer>
+              );
+            }
+          )}
+        {!!sheetType &&
+          !sheetType[0].model &&
+          !!sheetType[0].name &&
+          sheetType.length > 0 &&
+          sheetType.map(({ name, height, mass, birth_year, gender, url }) => {
             return (
-              <SheetContainer key={episode_id}>
-                <p>{title}</p>
+              <SheetContainer key={url}>
+                <p>Nombre: {name}</p>
+                <p>Altura: {height}</p>
+                <p>Masa: {mass}</p>
+                <p>Año de Nacimiento: {birth_year}</p>
+                <p>Género: {gender}</p>
               </SheetContainer>
             );
           })}
         {!!sheetType &&
-          !!sheetType[0].name &&
+          !!sheetType[0].model &&
           sheetType.length > 0 &&
-          sheetType.map(({ name }) => {
-            return (
-              <SheetContainer key={name}>
-                <p>{name}</p>
-              </SheetContainer>
-            );
-          })}
+          sheetType.map(
+            ({ name, model, crew, length, passengers, manufacturer, url }) => {
+              return (
+                <SheetContainer key={url}>
+                  <p>Nombre: {name}</p>
+                  <p>Modelo: {model}</p>
+                  <p>Fabricante {manufacturer}</p>
+                  <p>Tripulación: {crew}</p>
+                  <p>Pasajeros: {passengers}</p>
+                  <p>Longitud: {length}</p>
+                </SheetContainer>
+              );
+            }
+          )}
       </SheetsContainer>
     </>
   );
