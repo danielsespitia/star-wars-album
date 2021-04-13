@@ -1,3 +1,7 @@
+html {
+  overflow-y: scroll;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +14,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url('https://www.tokkoro.com/picsup/2811105-star-wars-lightsaber-concept-art-science-fiction___movie-wallpapers.jpg');
   
 }
@@ -18,25 +22,4 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-.scrollbar-bfalcon::-webkit-scrollbar {
-  width: 8px;
-}
-
-.scrollbar-bfalcon::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba (0, 0, 0, 0.3);
-  border-radius: 8px;
-  width: 5px;
-}
-
-.scrollbar-bfalcon::-webkit-scrollbar-thumb {
-  border-radius: 8px;
-  width: 5px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-  background-color: rgba(0, 183, 148, 0.7);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: white;
 }
