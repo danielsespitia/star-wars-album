@@ -1,16 +1,16 @@
 import styled from 'styled-components';
 
-export const TypeContainer = styled.div`
-  border-top: 1px solid white;
-`;
+export const name = '';
+
+export const TypeContainer = styled.div``;
 
 export const TypeHeader = styled.header`
   display: flex;
   height: 40px;
   align-items: center;
   justify-content: space-between;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 `;
 
 export const TitleButton = styled.button`
@@ -29,7 +29,6 @@ export const GetButton = styled.button`
   color: white;
   font-size: 1em;
   padding: 8px;
-
   background: none;
   border-radius: 10px;
   border: 2px solid white;
@@ -49,6 +48,7 @@ export const SheetsContainer = styled.div`
 
 export const SheetContainerWhite = styled.div`
   display: flex;
+  background-color: rgba(255, 255, 255, 0.25);
   font-size: 0.77em;
   text-align: center;
   flex-direction: column;
@@ -56,24 +56,38 @@ export const SheetContainerWhite = styled.div`
   margin-left: 10px;
   margin-bottom: 50px;
   border: 2px solid white;
+  background-color: 2px solid white;
   height: 250px;
   min-width: 200px;
   max-width: 200px;
   &:hover {
     transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.5);
   }
 `;
 
 export const SheetContainerBlue = styled(SheetContainerWhite)`
   border: 2px solid #b0fceb;
+  background-color: rgba(176, 252, 235, 0.25);
+  &:hover {
+    background-color: rgba(176, 252, 235, 0.5);
+  }
 `;
 
 export const SheetContainerGreen = styled(SheetContainerWhite)`
   border: 2px solid #75c89c;
+  background-color: rgba(117, 200, 156, 0.25);
+  &:hover {
+    background-color: rgba(117, 200, 156, 0.5);
+  }
 `;
 
 export const SheetContainerRed = styled(SheetContainerWhite)`
   border: 2px solid #f60b07;
+  background-color: rgba(246, 11, 7, 0.25);
+  &:hover {
+    background-color: rgba(246, 11, 7, 0.5);
+  }
 `;
 
 export const SheetTitle = styled.h3`

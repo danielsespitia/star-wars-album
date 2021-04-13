@@ -7,7 +7,7 @@ export const HeaderContainer = styled.header`
   background-color: #000;
   height: 100px;
   opacity: 0.7;
-  border-bottom: 2px dashed #75c89c;
+  border-bottom: 2px dashed white;
 `;
 
 export const LogoContainer = styled.figure`

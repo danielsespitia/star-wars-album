@@ -1,5 +1,4 @@
 import {
-  TypeContainer,
   TypeHeader,
   TitleButton,
   GetButton,
@@ -18,7 +17,11 @@ import { BiMinus } from 'react-icons/bi';
 
 function Sheet({ name, sheetType, handleClick, handleToggle, toggle }) {
   return (
-    <TypeContainer>
+    <div
+      style={{
+        borderTop: `1px dashed ${name === 'Películas' ? '#b0fceb' : '#f60b07'}`,
+      }}
+    >
       <TypeHeader>
         <TitleButton onClick={() => handleToggle(name)}>
           <strong>{name}</strong>
@@ -138,7 +141,7 @@ function Sheet({ name, sheetType, handleClick, handleToggle, toggle }) {
             )}
         </SheetsContainer>
       )}
-    </TypeContainer>
+    </div>
   );
 }
 
