@@ -6,16 +6,17 @@ export const TypeContainer = styled.div`
 
 export const TypeHeader = styled.header`
   display: flex;
+  height: 40px;
   align-items: center;
   justify-content: space-between;
-  padding-top: 20px;
+  margin-top: 30px;
   margin-bottom: 30px;
-  margin-right: 10px;
 `;
 
 export const TitleButton = styled.button`
+  display: flex;
+  align-items: center;
   background: none;
-  margin-top: 14px;
   font-size: 1.5em;
   border: none;
   color: white;
@@ -27,7 +28,8 @@ export const TitleButton = styled.button`
 export const GetButton = styled.button`
   color: white;
   font-size: 1em;
-  padding: 10px;
+  padding: 8px;
+
   background: none;
   border-radius: 10px;
   border: 2px solid white;
@@ -90,3 +92,5 @@ export const TextContainer = styled.div`
   margin-right: 15px;
   flex-direction: column;
 `;
+
+export const titleButtonStyle = { marginLeft: '10px' };

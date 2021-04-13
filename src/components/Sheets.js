@@ -10,7 +10,11 @@ import {
   SheetContainerRed,
   SheetTitle,
   TextContainer,
+  titleButtonStyle,
 } from '../assets/styles/SheetsStyles';
+
+import { BsPlus } from 'react-icons/bs';
+import { BiMinus } from 'react-icons/bi';
 
 function Sheet({ name, sheetType, handleClick, handleToggle, toggle }) {
   return (
@@ -18,6 +22,8 @@ function Sheet({ name, sheetType, handleClick, handleToggle, toggle }) {
       <TypeHeader>
         <TitleButton onClick={() => handleToggle(name)}>
           <strong>{name}</strong>
+          {!toggle && <BsPlus size={20} style={titleButtonStyle} />}
+          {!!toggle && <BiMinus size={20} style={titleButtonStyle} />}
         </TitleButton>
         {!!toggle && (
           <GetButton onClick={() => handleClick(name)}>
