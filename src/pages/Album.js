@@ -14,12 +14,6 @@ function Album() {
     starships: auth.starships,
   });
 
-  const [toggle, setToggle] = useState({
-    films: false,
-    people: false,
-    starships: false,
-  });
-
   const handleClick = async (name) => {
     if (name === 'Películas') {
       try {
@@ -62,55 +56,22 @@ function Album() {
     }
   };
 
-  const handleToggle = (name) => {
-    if (name === 'Películas') {
-      if (toggle.films === true) {
-        setToggle({ ...toggle, films: false });
-      }
-      if (toggle.films === false) {
-        setToggle({ ...toggle, films: true });
-      }
-    }
-    if (name === 'Personajes') {
-      if (toggle.people === true) {
-        setToggle({ ...toggle, people: false });
-      }
-      if (toggle.people === false) {
-        setToggle({ ...toggle, people: true });
-      }
-    }
-    if (name === 'Naves') {
-      if (toggle.starships === true) {
-        setToggle({ ...toggle, starships: false });
-      }
-      if (toggle.starships === false) {
-        setToggle({ ...toggle, starships: true });
-      }
-    }
-  };
-
   return (
     <AlbumContainer>
       <Sheets
         name="Películas"
         sheetType={albumData.films}
         handleClick={handleClick}
-        handleToggle={handleToggle}
-        toggle={toggle.films}
       />
       <Sheets
         name="Personajes"
         sheetType={albumData.people}
         handleClick={handleClick}
-        handleToggle={handleToggle}
-        toggle={toggle.people}
       />
       <Sheets
         name="Naves"
         sheetType={albumData.starships}
         handleClick={handleClick}
-        handleToggle={handleToggle}
-        toggle={toggle.starships}
       />
     </AlbumContainer>
   );
