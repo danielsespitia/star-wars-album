@@ -63,7 +63,6 @@ function Album() {
   };
 
   const handleToggle = (name) => {
-    console.log(name);
     if (name === 'Películas') {
       if (toggle.films === true) {
         setToggle({ ...toggle, films: false });
