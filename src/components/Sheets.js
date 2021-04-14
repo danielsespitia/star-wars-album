@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   TypeHeader,
   TitleButton,
@@ -15,7 +16,18 @@ import {
 import { BsPlus } from 'react-icons/bs';
 import { BiMinus } from 'react-icons/bi';
 
-function Sheet({ name, sheetType, handleClick, handleToggle, toggle }) {
+function Sheet({ name, sheetType, handleClick }) {
+  const [toggle, setToggle] = useState(false);
+
+  const handleToggle = () => {
+    if (toggle === true) {
+      setToggle(false);
+    }
+    if (toggle === false) {
+      setToggle(true);
+    }
+  };
+
   return (
     <div
       style={{
@@ -23,7 +35,7 @@ function Sheet({ name, sheetType, handleClick, handleToggle, toggle }) {
       }}
     >
       <TypeHeader>
-        <TitleButton onClick={() => handleToggle(name)}>
+        <TitleButton onClick={() => handleToggle()}>
           <strong>{name}</strong>
           {!toggle && <BsPlus size={20} style={titleButtonStyle} />}
           {!!toggle && <BiMinus size={20} style={titleButtonStyle} />}
