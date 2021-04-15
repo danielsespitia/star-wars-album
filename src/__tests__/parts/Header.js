@@ -7,14 +7,17 @@ describe('Header', () => {
   });
   it('renders header', () => {
     const wrapper = shallow(<Header />);
-    expect(wrapper.find('.header').length).toBe(1);
+    const header = wrapper.find('.header');
+    expect(header.length).toBe(1);
   });
   it('renders logo container', () => {
     const wrapper = shallow(<Header />);
-    expect(wrapper.find('.logo-container').length).toBe(1);
+    const logoContainer = wrapper.find('.logo-container');
+    expect(logoContainer.length).toBe(1);
   });
   it('renders star wars logo', () => {
     const wrapper = shallow(<Header />);
-    expect(wrapper.find('.star-wars-logo').length).toBe(1);
+    const logo = wrapper.find('.star-wars-logo');
+    expect(logo.length).toBe(1);
   });
 });

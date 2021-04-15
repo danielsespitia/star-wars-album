@@ -1,4 +1,6 @@
 import App from '../App';
+import Header from '../parts/Header';
+import Album from '../pages/Album';
 import { shallow } from 'enzyme';
 
 describe('App', () => {
@@ -7,14 +9,17 @@ describe('App', () => {
   });
   it('renders header', () => {
     const wrapper = shallow(<App />);
-    expect(wrapper.find('Header').length).toBe(1);
+    const header = wrapper.find(Header);
+    expect(header.exists()).toBe(true);
   });
   it('renders div', () => {
     const wrapper = shallow(<App />);
-    expect(wrapper.find('div').length).toBe(1);
+    const div = wrapper.find('div');
+    expect(div.length).toBe(1);
   });
   it('renders album', () => {
     const wrapper = shallow(<App />);
-    expect(wrapper.find('Album').length).toBe(1);
+    const album = wrapper.find(Album);
+    expect(album.exists()).toBe(true);
   });
 });

@@ -47,7 +47,7 @@ function Sheet({ name, sheetType, handleClick }) {
         )}
       </TypeHeader>
       {!!toggle && (
-        <SheetsContainer>
+        <SheetsContainer id="initial-state-render">
           {!!sheetType &&
             !sheetType[0].title &&
             !sheetType[0].name &&
@@ -68,7 +68,7 @@ function Sheet({ name, sheetType, handleClick }) {
             sheetType.map(
               ({ episode_id, title, director, producer, release_date }) => {
                 return (
-                  <SheetContainerBlue key={episode_id}>
+                  <SheetContainerBlue key={episode_id} id="films-render">
                     <SheetTitle>{title}</SheetTitle>
                     <TextContainer>
                       <p>
@@ -94,7 +94,7 @@ function Sheet({ name, sheetType, handleClick }) {
             sheetType.length > 0 &&
             sheetType.map(({ name, height, mass, birth_year, gender, url }) => {
               return (
-                <SheetContainerGreen key={url}>
+                <SheetContainerGreen key={url} id="people-render">
                   <SheetTitle>{name}</SheetTitle>
                   <TextContainer>
                     <p>
@@ -128,7 +128,7 @@ function Sheet({ name, sheetType, handleClick }) {
                 url,
               }) => {
                 return (
-                  <SheetContainerRed key={url}>
+                  <SheetContainerRed key={url} id="starship-render">
                     <SheetTitle>{name}</SheetTitle>
                     <TextContainer>
                       <p>
