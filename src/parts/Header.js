@@ -4,11 +4,12 @@ import {
   StarWarsLogo,
 } from '../assets/styles/HeaderStyles';
 
-function Header() {
+export function Header() {
   return (
-    <HeaderContainer>
-      <LogoContainer>
+    <HeaderContainer className="header">
+      <LogoContainer className="logo-container">
         <StarWarsLogo
+          className="star-wars-logo"
           src="https://1000marcas.net/wp-content/uploads/2019/12/Star-Wars-Logo.png"
           alt="logo"
         />

@@ -57,18 +57,18 @@ function Album() {
   };
 
   return (
-    <AlbumContainer>
-      <Sheets
+    <AlbumContainer className="album-container">
+      <Sheets className="sheets"
         name="Películas"
         sheetType={albumData.films}
         handleClick={handleClick}
       />
-      <Sheets
+      <Sheets className="sheets"
         name="Personajes"
         sheetType={albumData.people}
         handleClick={handleClick}
       />
-      <Sheets
+      <Sheets className="sheets"
         name="Naves"
         sheetType={albumData.starships}
         handleClick={handleClick}
