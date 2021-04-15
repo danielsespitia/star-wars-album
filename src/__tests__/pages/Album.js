@@ -8,11 +8,12 @@ describe('Album', () => {
   });
   it('renders album container div', () => {
     const wrapper = shallow(<Album />);
-    expect(wrapper.find('.album-container').length).toBe(1);
+    const albumContainer = wrapper.find('.album-container');
+    expect(albumContainer.length).toBe(1);
   });
   it('renders sheets', () => {
     const wrapper = shallow(<Album />);
-    const sheets = wrapper.find(Sheets)
+    const sheets = wrapper.find(Sheets);
     expect(sheets.length).toBe(3);
   });
 });

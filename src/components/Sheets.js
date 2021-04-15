@@ -16,7 +16,9 @@ import {
 import { BsPlus } from 'react-icons/bs';
 import { BiMinus } from 'react-icons/bi';
 
-function Sheet({ name, sheetType, handleClick }) {
+TitleButton.displayName = 'button';
+
+function Sheets({ name, sheetType, handleClick }) {
   const [toggle, setToggle] = useState(false);
 
   const handleToggle = () => {
@@ -30,15 +32,24 @@ function Sheet({ name, sheetType, handleClick }) {
 
   return (
     <div
+      className="sheets-container"
       style={{
         borderTop: `1px dashed ${name === 'Películas' ? '#b0fceb' : '#f60b07'}`,
       }}
     >
-      <TypeHeader>
-        <TitleButton onClick={() => handleToggle()}>
+      <TypeHeader className="type-header">
+        <TitleButton className="name-button" onClick={() => handleToggle()}>
           <strong>{name}</strong>
-          {!toggle && <BsPlus size={20} style={titleButtonStyle} />}
-          {!!toggle && <BiMinus size={20} style={titleButtonStyle} />}
+          {!toggle && (
+            <BsPlus className="plus-icon" size={20} style={titleButtonStyle} />
+          )}
+          {!!toggle && (
+            <BiMinus
+              className="minus-icon"
+              size={20}
+              style={titleButtonStyle}
+            />
+          )}
         </TitleButton>
         {!!toggle && (
           <GetButton onClick={() => handleClick(name)}>
@@ -157,4 +168,4 @@ function Sheet({ name, sheetType, handleClick }) {
   );
 }
 
-export default Sheet;
+export default Sheets;
