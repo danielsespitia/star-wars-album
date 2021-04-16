@@ -16,7 +16,7 @@ import {
 import { BsPlus } from 'react-icons/bs';
 import { BiMinus } from 'react-icons/bi';
 
-function Sheet({ name, sheetType, handleClick }) {
+function Sheets({ name, sheetType, handleClick }) {
   const [toggle, setToggle] = useState(false);
 
   const handleToggle = () => {
@@ -30,24 +30,33 @@ function Sheet({ name, sheetType, handleClick }) {
 
   return (
     <div
+      className="sheets-container"
       style={{
         borderTop: `1px dashed ${name === 'Películas' ? '#b0fceb' : '#f60b07'}`,
       }}
     >
-      <TypeHeader>
-        <TitleButton onClick={() => handleToggle()}>
+      <TypeHeader className="type-header">
+        <TitleButton className="name-button" onClick={() => handleToggle()}>
           <strong>{name}</strong>
-          {!toggle && <BsPlus size={20} style={titleButtonStyle} />}
-          {!!toggle && <BiMinus size={20} style={titleButtonStyle} />}
+          {!toggle && (
+            <BsPlus className="plus-icon" size={20} style={titleButtonStyle} />
+          )}
+          {!!toggle && (
+            <BiMinus
+              className="minus-icon"
+              size={20}
+              style={titleButtonStyle}
+            />
+          )}
         </TitleButton>
         {!!toggle && (
-          <GetButton onClick={() => handleClick(name)}>
+          <GetButton className="get-button" onClick={() => handleClick(name)}>
             Obtener {name}
           </GetButton>
         )}
       </TypeHeader>
       {!!toggle && (
-        <SheetsContainer>
+        <SheetsContainer id="initial-state-render">
           {!!sheetType &&
             !sheetType[0].title &&
             !sheetType[0].name &&
@@ -55,7 +64,7 @@ function Sheet({ name, sheetType, handleClick }) {
             sheetType.length > 0 &&
             sheetType.map((pos) => {
               return (
-                <SheetContainerWhite key={pos}>
+                <SheetContainerWhite className="white-cont" key={pos}>
                   <TextContainer>
                     <p>{pos}</p>
                   </TextContainer>
@@ -68,7 +77,7 @@ function Sheet({ name, sheetType, handleClick }) {
             sheetType.map(
               ({ episode_id, title, director, producer, release_date }) => {
                 return (
-                  <SheetContainerBlue key={episode_id}>
+                  <SheetContainerBlue key={episode_id} id="films-render">
                     <SheetTitle>{title}</SheetTitle>
                     <TextContainer>
                       <p>
@@ -94,7 +103,7 @@ function Sheet({ name, sheetType, handleClick }) {
             sheetType.length > 0 &&
             sheetType.map(({ name, height, mass, birth_year, gender, url }) => {
               return (
-                <SheetContainerGreen key={url}>
+                <SheetContainerGreen key={url} id="people-render">
                   <SheetTitle>{name}</SheetTitle>
                   <TextContainer>
                     <p>
@@ -128,7 +137,7 @@ function Sheet({ name, sheetType, handleClick }) {
                 url,
               }) => {
                 return (
-                  <SheetContainerRed key={url}>
+                  <SheetContainerRed key={url} id="starship-render">
                     <SheetTitle>{name}</SheetTitle>
                     <TextContainer>
                       <p>
@@ -157,4 +166,4 @@ function Sheet({ name, sheetType, handleClick }) {
   );
 }
 
-export default Sheet;
+export default Sheets;
