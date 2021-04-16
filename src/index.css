@@ -1,3 +1,12 @@
+html {
+  overflow-y: scroll;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +14,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url('https://www.tokkoro.com/picsup/2811105-star-wars-lightsaber-concept-art-science-fiction___movie-wallpapers.jpg');
+  
 }
 
 code {
