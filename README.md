@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# Star Wars Album and Testing - Technical Test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Developed with JavaScript in React.js to create a Web App that feds from SWAPI with its respective Unit, Integration and E2E tests.
 
-## Available Scripts
+![Screen Shot 2021-04-15 at 11 30 43 PM](https://user-images.githubusercontent.com/63252057/114977033-9afe6b00-9e4c-11eb-86da-ed9b3cec6ca8.png)
 
-In the project directory, you can run:
+You get an album with sheets every time you run the app, you can collapse any of the different sections (Películas, Personajes, Naves) and get data from the SWAPI to fill the previously empty sheets. You can also run the testing scripts for Jest/Enzyme and Cypress to run different App functioning tests.
 
-### `yarn start`
+## Built With
+- Javascript.
+- React.js.
+- SWAPI https://swapi.dev/documentation
+- Styled with CSS in JS (Styled Components).
+- Jest/Enzyme for Unit Test
+- Cypress for Integration/E2E tests
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Authors
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+👤 **Daniel S. Espitia**
 
-### `yarn test`
+-   GitHub: [@danielsespitia](https://github.com/danielsespitia)
+-   LinkedIn: [danielsespitia](https://linkedin.com/in/danielsespitia)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started 
+To run this project it is necessary to have Node.js installed on your machine.
 
-### `yarn build`
+To run the app, you have to install its dependencies first by running one of the following commands: `yarn install` or `npm install`. Once the dependencies installation is done, you will be able to run the app with the commands `yarn start` or `npm start` in your web browser.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+You can also run the written unit tests with `yarn test` or `npm test` and the integration and E2E tests with `yarn e2e` or `npm e2e` to open the Cypress' Electron App and watch the live demo of the tests or you can run `yarn cypress run` or `npm cypress run` to run the tests in your Terminal.
