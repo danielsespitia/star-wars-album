@@ -1,6 +1,7 @@
 import Sheets from '../../components/Sheets';
 import { TitleButton } from '../../assets/styles/SheetsStyles';
 import { shallow, render, mount } from 'enzyme';
+import store from '../../store';
 
 describe('Sheets', () => {
   it('renders without crashing', () => {
@@ -39,14 +40,14 @@ describe('Sheets', () => {
     const minusIcon = wrapper.find('.minus-icon');
     expect(minusIcon.length).toBe(1);
   });
-  // it('should click', () => {
-  //   const wrapper = shallow(<Sheets />);
-  //   const button = wrapper.find('.name-button');
+  it('should render "obtener" button when name button is pressed', () => {
+    const wrapper = shallow(<Sheets />);
+    const button = wrapper.find('.name-button');
 
-  //   expect(button.exists()).toBe(true);
+    button.simulate('click');
 
-  //   button.simulate('click');
-  //   const minusIcon = wrapper.find('.minus-icon');
-  //   expect(minusIcon.length).toBe(1);
-  // });
+    const getButton = wrapper.find('.get-button');
+
+    expect(getButton.exists()).toBe(true);
+  });
 });

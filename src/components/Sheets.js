@@ -16,8 +16,6 @@ import {
 import { BsPlus } from 'react-icons/bs';
 import { BiMinus } from 'react-icons/bi';
 
-TitleButton.displayName = 'button';
-
 function Sheets({ name, sheetType, handleClick }) {
   const [toggle, setToggle] = useState(false);
 
@@ -52,7 +50,7 @@ function Sheets({ name, sheetType, handleClick }) {
           )}
         </TitleButton>
         {!!toggle && (
-          <GetButton onClick={() => handleClick(name)}>
+          <GetButton className="get-button" onClick={() => handleClick(name)}>
             Obtener {name}
           </GetButton>
         )}
@@ -66,7 +64,7 @@ function Sheets({ name, sheetType, handleClick }) {
             sheetType.length > 0 &&
             sheetType.map((pos) => {
               return (
-                <SheetContainerWhite key={pos}>
+                <SheetContainerWhite className="white-cont" key={pos}>
                   <TextContainer>
                     <p>{pos}</p>
                   </TextContainer>

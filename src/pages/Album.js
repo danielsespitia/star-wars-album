@@ -3,15 +3,15 @@ import { useState } from 'react';
 import axios from 'axios';
 
 import Sheets from '../components/Sheets';
-import auth from '../auth';
+import store from '../store';
 
 import { AlbumContainer } from '../assets/styles/GlobalStyles';
 
 function Album() {
   const [albumData, setAlbumData] = useState({
-    films: auth.films,
-    people: auth.people,
-    starships: auth.starships,
+    films: store.films,
+    people: store.people,
+    starships: store.starships,
   });
 
   const handleClick = async (name) => {
@@ -58,17 +58,20 @@ function Album() {
 
   return (
     <AlbumContainer className="album-container">
-      <Sheets className="sheets"
+      <Sheets
+        className="sheets"
         name="Películas"
         sheetType={albumData.films}
         handleClick={handleClick}
       />
-      <Sheets className="sheets"
+      <Sheets
+        className="sheets"
         name="Personajes"
         sheetType={albumData.people}
         handleClick={handleClick}
       />
-      <Sheets className="sheets"
+      <Sheets
+        className="sheets"
         name="Naves"
         sheetType={albumData.starships}
         handleClick={handleClick}
