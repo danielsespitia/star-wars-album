@@ -2,8 +2,6 @@
 
 Developed with JavaScript in React.js to create a Web App that feds from SWAPI with its respective Unit, Integration and E2E tests.
 
-<img src="https://user-images.githubusercontent.com/63252057/114977033-9afe6b00-9e4c-11eb-86da-ed9b3cec6ca8.png" alt="drawing" width="200"/>
-
 ![Screen Shot 2021-04-15 at 11 30 43 PM](https://user-images.githubusercontent.com/63252057/114977033-9afe6b00-9e4c-11eb-86da-ed9b3cec6ca8.png)
 ![Screen_Shot_2021-04-16_at_12 20 50_AM](https://user-images.githubusercontent.com/63252057/114977698-b6b64100-9e4d-11eb-837a-d5ab73f24f52.png)
 ![Screen_Shot_2021-04-16_at_12 28 18_AM](https://user-images.githubusercontent.com/63252057/114977700-b7e76e00-9e4d-11eb-99ba-0887714ce5d1.png)
